@@ -23,7 +23,7 @@ COPY script.sh /app/script.sh
 RUN chmod a+x /app/script.sh
 
 WORKDIR /app
-RUN curl -Lk 'https://github.com/johanmeijer/grott/archive/refs/heads/master.zip' --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./
+RUN curl -Lk 'https://github.com/otfrancis1/grott/archive/refs/heads/master.zip' --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./
 # Move the addon
 RUN curl -L 'https://raw.githubusercontent.com/egguy/grott/feature/ha-extension/examples/Home%20Assistent/grott_ha.py' -o grott_ha.py
 
